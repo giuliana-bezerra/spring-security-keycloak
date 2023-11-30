@@ -1,0 +1,17 @@
+server:
+  port: 9090
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: spring-security-keycloak
+            client-secret: cf1jpbsovllGoXMS5iLVv2HzMp2la5AS
+            scope: openid, profile, email
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/giulianabezerra
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/giulianabezerra
